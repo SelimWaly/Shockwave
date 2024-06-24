@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="assets/logo.png" alt="Banner" width="35%" height="35%">
+    <img src="assets/logo.png" alt="Banner" width="30%" height="30%">
 </p>
 
 <h1 align="center">Shockwave</h1>

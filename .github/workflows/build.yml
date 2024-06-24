@@ -1,0 +1,21 @@
+name: Build Java Program
+
+on: [push]
+
+jobs:
+  build-java:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17.0.6+10'
+      - uses: gradle/gradle-build-action@v2
+      - name: Build
+        run: ./gradlew :src:build
+      - uses: actions/upload-artifact@v3
+        with:
+          name: src
+          path: src/build/distributions/src-*.zip
+          
